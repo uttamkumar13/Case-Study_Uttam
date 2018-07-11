@@ -8,16 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Testcase2_Item_Search {
+public class Testcase2_Item_Search implements Object_Repository{
 
 	public static void main(String[] args) {
 		// Launching Flipkart home page and searching some specific product
 		
 		
-		  System.setProperty("webdriver.chrome.driver", "D:\\Uttam\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", Path_Driver);
 		  WebDriver driver= new ChromeDriver();
 					
-		  driver.get("https://www.flipkart.com");
+		  driver.get(BaseURL);
 		  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		  try {
@@ -49,8 +49,7 @@ public class Testcase2_Item_Search {
 		  Thread.sleep(3000);
 		  driver.findElement(By.xpath("//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")).click();
 		  Thread.sleep(3000);
-		  driver.findElement(By.xpath("//button[@class='_2AkmmA _14O7kc mrmU5i']")).click();
-		  
+		  driver.findElement(By.xpath("//button[@class='_2AkmmA _14O7kc mrmU5i']")).click(); 
 		  
 		}
           }
